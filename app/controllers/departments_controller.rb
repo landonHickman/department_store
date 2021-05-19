@@ -16,8 +16,16 @@ class DepartmentsController < ApplicationController
   end
 
   def new
-    render component: "DepartmentNew", props: {department: @department}
+    render component: "DepartmentNew"
+  end
 
+  def create
+    @department = Department.new(department_params)
+    if(@department.save)
+      redirect_to departments_path
+    else
+
+    end
   end
 
   def destroy
@@ -29,6 +37,10 @@ class DepartmentsController < ApplicationController
 
   def set_department
     @department = Department.find(params[:id])
+  end
+
+  def department_params
+    params.require(:department).permit(:name)
   end
 
 end
