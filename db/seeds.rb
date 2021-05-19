@@ -5,3 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require"faker"
+Department.destroy_all
+
+15.times do 
+  Department.create(
+    name: Faker::Space.unique.star,
+  )
+end
+  puts "Seeded you have #{Department.all.size} pages."
