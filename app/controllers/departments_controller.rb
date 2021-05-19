@@ -15,7 +15,6 @@ class DepartmentsController < ApplicationController
   end
 
   def update
-    
     if @department.update(department_params)
       redirect_to departments_path
     else

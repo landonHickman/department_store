@@ -8,6 +8,7 @@ const Departments = (props) => {
         <div>
           <h1>{department.name}</h1>
           <a href={`/departments/${department.id}`}>Show</a>
+          <a href={`/departments/${department.id}/items`}>Show Department and Items</a>
           <a href={`/departments/${department.id}/edit`}>Edit</a>
           <a href={`/departments/${department.id}`} data-method="delete">Delete</a>
         </div>
