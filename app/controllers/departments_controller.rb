@@ -11,13 +11,18 @@ class DepartmentsController < ApplicationController
   end
 
   def edit
-    render component: "DepartmentEdit"
+    render component: "DepartmentEdit", props: {department: @department}
 
   end
 
   def new
-    render component: "DepartmentNew"
+    render component: "DepartmentNew", props: {department: @department}
 
+  end
+
+  def destroy
+    @department.destroy
+    redirect_to departments_path
   end
 
   private
