@@ -6,12 +6,17 @@ class ItemsController < ApplicationController
   end
 
   def show
+    render component: "Item", props: {department: @department, item: @department.items.find(params[:id])}
   end
 
   def new
+    render component: "ItemNew"
+
   end
 
   def edit
+    render component: "ItemEdit"
+
   end
 
   private
