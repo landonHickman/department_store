@@ -12,7 +12,14 @@ class DepartmentsController < ApplicationController
 
   def edit
     render component: "DepartmentEdit", props: {department: @department}
+  end
 
+  def update
+    
+    if @department.update(department_params)
+      redirect_to departments_path
+    else
+    end
   end
 
   def new
