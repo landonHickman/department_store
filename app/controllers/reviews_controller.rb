@@ -25,7 +25,14 @@ class ReviewsController < ApplicationController
   end
   
   def edit
-    render component: "ReviewEdit"
+    render component: "ReviewEdit", props: {item: @item, review: @review}
+  end
+
+  def update
+    if @review.update(review_params)
+      redirect_to item_reviews_path(@item.id)
+    else
+    end
   end
 
   private
