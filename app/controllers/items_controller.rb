@@ -24,8 +24,15 @@ class ItemsController < ApplicationController
   end
 
   def edit
-    render component: "ItemEdit"
+    render component: "ItemEdit", props: {department: @department, item: @item}
+  end
 
+  def update
+    if @item.update(item_params)
+      redirect_to department_items_path
+    else
+
+    end
   end
 
   private

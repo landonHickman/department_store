@@ -3,7 +3,7 @@ import React from 'react'
 const ItemNew = (props) => {
 
   const {department, item} = props
-  const {name, price} = item
+  // const {name, price} = item
   // const defaultName = name ? name : ""
   // const defaultPrice = price ? price : ""
   return(
