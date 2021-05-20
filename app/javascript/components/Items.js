@@ -19,6 +19,9 @@ const Items = (props) => {
 
   return(
     <div id="border">
+      <nav>
+        <a href="/"><button>Home</button></a>
+      </nav>
       <h1>{department.name}'s Items</h1>
       <a href={`/departments/${department.id}/items/new`}><button>Create a New Item</button></a>
       <a href='/'><button>Back to all Departments</button></a>

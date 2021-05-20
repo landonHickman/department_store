@@ -8,6 +8,9 @@ const ItemNew = (props) => {
   // const defaultPrice = price ? price : ""
   return(
     <div id="border">
+      <nav>
+        <a href="/"><button>Home</button></a>
+      </nav>
       <h1>Create New Item</h1>
       <form action={`/departments/${department.id}/items`} method="post">
       <p>Name</p>

@@ -5,6 +5,9 @@ const ItemEdit = (props) => {
   const {name, price} = item
   return(
     <div id="border">
+      <nav>
+        <a href="/"><button>Home</button></a>
+      </nav>
       <h1>ItemEdit</h1>
       <form action={`/departments/${department.id}/items/${item.id}`} method="post">
         <input type="hidden" name="_method" value="patch"/>

@@ -4,6 +4,9 @@ const Review = (props) => {
   const {item, review} = props
   return(
     <div id="border">
+      <nav>
+        <a href="/"><button>Home</button></a>
+      </nav>
       <h1>{`${item.name} Review`}</h1>
       <a href={`/items/${item.id}/reviews/`}><button>Back to Reviews</button></a>
       <p>{review.body}</p>

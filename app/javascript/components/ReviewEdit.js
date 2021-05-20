@@ -4,6 +4,9 @@ const ReviewEdit = (props) => {
   const {item, review} = props
   return(
     <div id="border">
+      <nav>
+        <a href="/"><button>Home</button></a>
+      </nav>
       <h1>Edit your Review</h1>
       <form action={`/items/${item.id}/reviews/${review.id}`} method="post">
         <input type="hidden" name="_method" value="patch"/>

@@ -5,6 +5,9 @@ const Department = (props) => {
   return(
     <>
     <div id="border">
+      <nav>
+        <a href="/"><button>Home</button></a>
+      </nav>
       <h1>{`Department ${name}`}</h1>
       <a href={`/departments/${id}/edit`}><button>Edit</button></a>
       <a href={`/departments/${id}`} data-method="delete"><button>Delete</button></a>

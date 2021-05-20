@@ -19,6 +19,9 @@ const Departments = (props) => {
 
   return(
     <div id="border">
+      <nav>
+        <a href="/"><button>Home</button></a>
+      </nav>
       <h1>Departments</h1>
       <a href="/departments/new"><button>New Department</button></a>
       {renderDepartments()}

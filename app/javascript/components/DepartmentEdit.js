@@ -4,6 +4,9 @@ const DepartmentEdit = (props) => {
   const {name, id} = props.department 
   return(
     <div id="border">
+      <nav>
+        <a href="/"><button>Home</button></a>
+      </nav>
       <h1>Edit Department</h1>
       <form action={`/departments/${id}`} method="post">
         <input type="hidden" name="_method" value="patch"/>

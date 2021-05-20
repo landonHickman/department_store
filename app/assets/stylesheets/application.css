@@ -47,20 +47,24 @@ button {
 h1 {
   font-size: 60px;
   color: white;
-  text-shadow: 2px 2px black;
+  text-shadow: 5px 5px black;
 }
 h2 {
   font-size: 40px;
   color: white;
-  text-shadow: 2px 2px black;
+  text-shadow: 4px 4px black;
 }
 h3 {
   font-size: 30px;
   color: white;
-  text-shadow: 2px 2px black;
+  text-shadow: 3px 3px black;
 }
 p {
   font-size: 20px;
   color: white;
   text-shadow: 2px 2px black;
+}
+nav {
+  display: flex;
+  justify-content: flex-end;
 }

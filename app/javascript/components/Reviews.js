@@ -17,6 +17,9 @@ const Reviews = (props) => {
   }
   return(
     <div id="border">
+      <nav>
+        <a href="/"><button>Home</button></a>
+      </nav>
       <h1>Reviews</h1>
       <h1>{item.name}</h1>
       <a href={`/items/${item.id}/reviews/new`}><button>Create New</button></a>
