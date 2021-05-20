@@ -6,7 +6,7 @@ class ItemsController < ApplicationController
   end
 
   def show
-    render component: "Item", props: {department: @department, item: @item, review: @item.reviews}
+    render component: "Item", props: {department: @department, item: @item}
   end
 
   def new

@@ -4,7 +4,8 @@ class ReviewsController < ApplicationController
 
   def index
     @reviews = @item.reviews
-    render component: "Reviews", props: {item: @item, reviews: @reviews}
+    # @department = Department.find(params[:id])
+    render component: "Reviews", props: {item: @item, reviews: @reviews, department: @department}
   end
   
   def show
@@ -12,7 +13,15 @@ class ReviewsController < ApplicationController
   end
   
   def new
-    render component: "ReviewNew"
+    render component: "ReviewNew", props: {item: @item, review: @review}
+  end
+
+  def create
+    review = @item.reviews.new(review_params)
+    if (review.save)
+      redirect_to item_reviews_path(@item.id)
+    else
+    end
   end
   
   def edit
@@ -20,6 +29,9 @@ class ReviewsController < ApplicationController
   end
 
   private
+  def review_params
+    params.require(:review).permit(:body)
+  end
 
   def set_item
     @item = Item.find(params[:item_id])

@@ -1,6 +1,6 @@
 import React from 'react'
 const Reviews = (props) => {
-  const {reviews, item} = props
+  const {reviews, item, department} = props
 
   const renderReviews = () => {
     return reviews.map( review => {
@@ -20,6 +20,7 @@ const Reviews = (props) => {
       <h1>Reviews</h1>
       <h1>{item.name}</h1>
       <a href={`/items/${item.id}/reviews/new`}>Create New</a>
+      {/* <a href={`/departments/${department.id}/items/${item.id}`}>Back to Item</a> */}
       {renderReviews()}
     </div>
   )
