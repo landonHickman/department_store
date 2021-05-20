@@ -21,6 +21,7 @@ const Items = (props) => {
     <div>
       <h1>{department.name}</h1>
       <a href={`/departments/${department.id}/items/new`}>Create a New Item</a>
+      <a href='/'>Back to all Departments</a>
       {renderItems()}
     </div>
   )
