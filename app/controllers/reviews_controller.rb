@@ -35,6 +35,12 @@ class ReviewsController < ApplicationController
     end
   end
 
+  def destroy
+    @review.destroy
+    redirect_to item_reviews_path(@item.id)
+
+  end
+
   private
   def review_params
     params.require(:review).permit(:body)

@@ -19,7 +19,7 @@ const Items = (props) => {
 
   return(
     <div>
-      <h1>{department.name}</h1>
+      <h1>{department.name}'s Items</h1>
       <a href={`/departments/${department.id}/items/new`}>Create a New Item</a>
       <a href='/'>Back to all Departments</a>
       {renderItems()}
