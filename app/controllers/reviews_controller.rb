@@ -4,7 +4,6 @@ class ReviewsController < ApplicationController
 
   def index
     @reviews = @item.reviews
-    # @department = Department.find(params[:id])
     render component: "Reviews", props: {item: @item, reviews: @reviews, department: @department}
   end
   
@@ -42,6 +41,7 @@ class ReviewsController < ApplicationController
   end
 
   private
+  
   def review_params
     params.require(:review).permit(:body)
   end

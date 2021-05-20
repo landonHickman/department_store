@@ -5,12 +5,12 @@ const Departments = (props) => {
   const renderDepartments = () => {
     return departments.map( department => {
       return(
-        <div>
+        <div id="border">
           <h1>{department.name}</h1>
-          <a href={`/departments/${department.id}`}>Show</a>
-          <a href={`/departments/${department.id}/items`}>Show Department and Items</a>
-          <a href={`/departments/${department.id}/edit`}>Edit</a>
-          <a href={`/departments/${department.id}`} data-method="delete">Delete</a>
+          <a href={`/departments/${department.id}`}><button>Show</button></a>
+          <a href={`/departments/${department.id}/items`}><button>Show Department and Items</button></a>
+          <a href={`/departments/${department.id}/edit`}><button>Edit</button></a>
+          <a href={`/departments/${department.id}`} data-method="delete"><button>Delete</button></a>
         </div>
       )
 
@@ -18,9 +18,9 @@ const Departments = (props) => {
   }
 
   return(
-    <div>
+    <div id="border">
       <h1>Departments</h1>
-      <a href="/departments/new">New Department</a>
+      <a href="/departments/new"><button>New Department</button></a>
       {renderDepartments()}
     </div>
   )

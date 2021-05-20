@@ -13,3 +13,54 @@
  *= require_tree .
  *= require_self
  */
+ @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');
+ 
+
+ a {
+  margin-right: 10px;
+}
+
+body {
+  background-image: url(departmentstore.jpeg);
+  background-size: cover;
+  background-position-y: center;
+  font-family: 'Oswald', sans-serif;
+}
+/* id="border" */
+#border {
+  border: solid 5px black;
+  margin: 5px;
+  border-radius: 25px;
+  background-color: rgba(126, 126, 126, 0.2);
+  text-align: center;
+}
+button {
+  height: 50px;
+  margin: 10px;
+  border: solid 3px black;
+  border-radius: 25px;
+  cursor: pointer;
+  background-color: rgba(252, 252, 252, 0.756);
+  font-weight: bold;
+
+}
+h1 {
+  font-size: 60px;
+  color: white;
+  text-shadow: 2px 2px black;
+}
+h2 {
+  font-size: 40px;
+  color: white;
+  text-shadow: 2px 2px black;
+}
+h3 {
+  font-size: 30px;
+  color: white;
+  text-shadow: 2px 2px black;
+}
+p {
+  font-size: 20px;
+  color: white;
+  text-shadow: 2px 2px black;
+}

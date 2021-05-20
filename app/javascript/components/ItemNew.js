@@ -7,7 +7,7 @@ const ItemNew = (props) => {
   // const defaultName = name ? name : ""
   // const defaultPrice = price ? price : ""
   return(
-    <div>
+    <div id="border">
       <h1>Create New Item</h1>
       <form action={`/departments/${department.id}/items`} method="post">
       <p>Name</p>
