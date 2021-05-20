@@ -1,7 +1,6 @@
 import React from 'react'
 
 const Items = (props) => {
-
   const { department, items } = props
 
   const renderItems = () => {

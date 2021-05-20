@@ -10,8 +10,17 @@ class ItemsController < ApplicationController
   end
 
   def new
-    render component: "ItemNew"
+    @item = @department.items.new
+    render component: "ItemNew", props: {department: @department, item: @item}
+  end
 
+  def create
+    @item = @department.items.new(item_params)
+    if @item.save
+      redirect_to department_items_path
+    else
+
+    end
   end
 
   def edit
@@ -29,4 +38,7 @@ class ItemsController < ApplicationController
     @item = @department.items.find(params[:id])
   end
 
+  def item_params
+    params.require(:item).permit(:name, :price)
+  end
 end
