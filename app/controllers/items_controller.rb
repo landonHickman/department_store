@@ -6,7 +6,7 @@ class ItemsController < ApplicationController
   end
 
   def show
-    render component: "Item", props: {department: @department, item: @department.items.find(params[:id])}
+    render component: "Item", props: {department: @department, item: @item, review: @item.reviews}
   end
 
   def new
