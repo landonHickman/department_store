@@ -10,6 +10,7 @@ const ItemNew = (props) => {
     <div id="border">
       <nav>
         <a href="/"><button>Home</button></a>
+        <a href={`/departments/${department.id}/items`}><button>Back</button></a>
       </nav>
       <h1>Create New Item</h1>
       <form action={`/departments/${department.id}/items`} method="post">
@@ -18,7 +19,7 @@ const ItemNew = (props) => {
       <p>Price</p>
       <input /*you defaultValue={defaultPrice}*/placeholder="00.00" name="item[price]" type="float"/>
       <br />
-      <button type="submit">add</button>
+      <button type="submit">Add</button>
       </form>
     </div>
   )

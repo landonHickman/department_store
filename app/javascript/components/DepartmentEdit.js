@@ -6,12 +6,14 @@ const DepartmentEdit = (props) => {
     <div id="border">
       <nav>
         <a href="/"><button>Home</button></a>
+        <a href={`/departments/${id}`}><button>Back</button></a>
+        
       </nav>
       <h1>Edit Department</h1>
       <form action={`/departments/${id}`} method="post">
         <input type="hidden" name="_method" value="patch"/>
-        <input defaultValue={name} placeholder={`${name}`} name="department[name]"/>
-        <button type="submit">add</button>
+        <textarea defaultValue={name} placeholder={`${name}`} name="department[name]"/>
+        <button type="submit">Update</button>
       </form>
     </div>
   )

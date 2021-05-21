@@ -7,10 +7,12 @@ const Departments = (props) => {
       return(
         <div id="border">
           <h1>{department.name}</h1>
-          <a href={`/departments/${department.id}`}><button>Show</button></a>
-          <a href={`/departments/${department.id}/items`}><button>Show Department and Items</button></a>
-          <a href={`/departments/${department.id}/edit`}><button>Edit</button></a>
-          <a href={`/departments/${department.id}`} data-method="delete"><button>Delete</button></a>
+          <a href={`/departments/${department.id}`}><button>View</button></a>
+          {/* <a href={`/departments/${department.id}/items`}><button>Show Department and Items</button></a> */}
+          
+          {/* unnessasary links user can do the same thing once they get into the department page. */}
+          {/* <a href={`/departments/${department.id}/edit`}><button>Edit</button></a>
+          <a href={`/departments/${department.id}`} data-method="delete"><button>Delete</button></a> */}
         </div>
       )
 

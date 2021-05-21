@@ -6,9 +6,9 @@ const Review = (props) => {
     <div id="border">
       <nav>
         <a href="/"><button>Home</button></a>
+        <a href={`/items/${item.id}/reviews/`}><button>Back</button></a>
       </nav>
       <h1>{`${item.name} Review`}</h1>
-      <a href={`/items/${item.id}/reviews/`}><button>Back to Reviews</button></a>
       <p>{review.body}</p>
       <a href={`/items/${item.id}/reviews/${review.id}/edit`}><button>Edit</button></a>
       <a href={`/items/${item.id}/reviews/${review.id}`} data-method="delete" ><button>Delete</button></a>

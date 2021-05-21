@@ -6,13 +6,14 @@ const ReviewEdit = (props) => {
     <div id="border">
       <nav>
         <a href="/"><button>Home</button></a>
+        <a href={`/items/${item.id}/reviews/${review.id}`}><button>Back</button></a>
       </nav>
       <h1>Edit your Review</h1>
       <form action={`/items/${item.id}/reviews/${review.id}`} method="post">
         <input type="hidden" name="_method" value="patch"/>
-        <input defaultValue={review.body} placeholder="Review" name="review[body]"/>
+        <textarea defaultValue={review.body} placeholder="Review" name="review[body]"/>
         <br/>
-        <button type="submit">add</button>
+        <button type="submit">Update</button>
       </form>
     </div>
   )
