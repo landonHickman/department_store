@@ -46,7 +46,7 @@ class ReviewsController < ApplicationController
     params.require(:review).permit(:body)
   end
 
-  def set_item
+  def set_item #defines item id
     @item = Item.find(params[:item_id])
   end
 

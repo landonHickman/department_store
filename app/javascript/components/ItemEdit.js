@@ -15,7 +15,7 @@ const ItemEdit = (props) => {
       <p>Name</p>
       <input defaultValue={name} placeholder="name" name="item[name]" type="text"/>
       <p>Price</p>
-      <textarea you defaultValue={price} placeholder="00.00" name="item[price]" type="float"/>
+      <textarea defaultValue={price} placeholder="00.00" name="item[price]" type="float"/>
       <br />
       <button type="submit">Update</button>
       </form>

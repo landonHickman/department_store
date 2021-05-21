@@ -15,6 +15,8 @@ ActiveRecord::Schema.define(version: 2021_05_20_193812) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  #when db:migrate is used these tables are created.
+
   create_table "departments", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
@@ -24,7 +26,7 @@ ActiveRecord::Schema.define(version: 2021_05_20_193812) do
   create_table "items", force: :cascade do |t|
     t.string "name"
     t.float "price"
-    t.bigint "department_id", null: false
+    t.bigint "department_id", null: false #bigint is department_id it = department.id
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["department_id"], name: "index_items_on_department_id"
@@ -32,7 +34,7 @@ ActiveRecord::Schema.define(version: 2021_05_20_193812) do
 
   create_table "reviews", force: :cascade do |t|
     t.text "body"
-    t.bigint "item_id", null: false
+    t.bigint "item_id", null: false #bigint is item_id which = department_id = department.id
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["item_id"], name: "index_reviews_on_item_id"

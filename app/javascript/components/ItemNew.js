@@ -3,6 +3,7 @@ import React from 'react'
 const ItemNew = (props) => {
 
   const {department, item} = props
+  // not sure why this was used in the neo notes it hasn't been shown in class.
   // const {name, price} = item
   // const defaultName = name ? name : ""
   // const defaultPrice = price ? price : ""
